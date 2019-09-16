@@ -1,0 +1,13 @@
+{
+	"name": "sql-one",
+	"config": {
+		"connector.class": "io.confluent.connect.jdbc.JdbcSourceConnector",
+		"tasks.max": "1",
+		"connection.url": "jdbc:sqlserver://localhost:1433;database=testDB;username=sa;password=reallyStrongPwd12345",
+		"table.whitelist": "customer",
+		"poll.interval.ms": 2000,
+		"mode": "bulk",
+		"validate.non.null": "false",
+		"topic.prefix": "one-"
+	}
+}
